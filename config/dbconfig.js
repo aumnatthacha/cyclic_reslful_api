@@ -1,7 +1,7 @@
 module.exports = {
     host:"aws.connect.psdb.cloud",
-    user:"oyu2xzzn84ywzk95rc3d",
-    password:"pscale_pw_en6tRDb0z7TFCz8gqumwig6abIj8AhJNm861d673CFg",
+    user:"pef46l5suxnyza57kj5e",
+    password:"pscale_pw_kgapdd3oEwhgVZTrx0OsOnU2LbV6IjFLHvplgxxjyup",
     db:"se_database"
 }
 // require('dotenv').config()
