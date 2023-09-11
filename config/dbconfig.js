@@ -1,14 +1,14 @@
 // module.exports = {
-//     host:"aws.connect.psdb.cloud",
-//     user:"cpr5pkne308z563iae79",
-//     password:"pscale_pw_VA0MaYiuArhK37S98p0XLkvkFhvShyNneA8IzHmzoAn",
-//     db:"se_database"
+//     // host:"aws.connect.psdb.cloud",
+//     // user:"1k4pfbvx1per8jx32k3a",
+//     // password:"pscale_pw_zHKSRWTWyMvanzxAd13lmdsXMKDc2XlSOYHNK7a1zAv",
+//     // db:"se_database"
 // }
 require('dotenv').config()
 
 module.exports = {
-    HOST: process.env.HOST,
-    USER: process.env.USER,
-    PASSWORD: process.env.PASSWORD,
-    DB: process.env.DB,
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    db: process.env.DB,
 };

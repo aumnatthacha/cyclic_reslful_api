@@ -7,10 +7,10 @@ const sequelize = new Sequelize(dbConfig.db, dbConfig.user, dbConfig.password, {
     dialect:"mysql",
     dialectOptions: {
       ssl: {
-        require: true,
-        rejectUnauthorized: false,
-      },
-    },
+          require: true,
+          rejectUnauthorized: false
+      }
+   },
 });
 
 //Test the database 
