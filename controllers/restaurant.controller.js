@@ -26,9 +26,11 @@ Restaurant.getAll = async () => {
 }
 
 //get byId
-Restaurant.getOne = async () => {
+Restaurant.getOne = async (id) => {
     try {
-        const restaurant = await Restaurant.findOne({});
+        const restaurant = await Restaurant.findOne({where:{
+            id:id
+        }});
         return restaurant ? restaurant.toJSON() : null;
     } catch (error) {
         console.log("err", error);
