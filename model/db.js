@@ -4,7 +4,7 @@ const dbConfig = require("../config/dbconfig");
 //Create sequelize instance
 const sequelize = new Sequelize(dbConfig.db, dbConfig.user, dbConfig.password, {
     host:dbConfig.host,
-    dialect:"mysql",
+    dialect:"postgres",
     dialectOptions: {
       ssl: {
           require: true,

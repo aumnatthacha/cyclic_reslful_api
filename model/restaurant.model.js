@@ -9,15 +9,15 @@ const Restaurant = sequelize.define("re", {
     },
     name: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     type: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     img: {
         type: DataTypes.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     createdAt: {
         type: DataTypes.DATE,
@@ -32,11 +32,11 @@ const Restaurant = sequelize.define("re", {
 });
 
 // คำสั่งการสร้างตารางเมื่อไม่มีตารางนั้นจะสร้างขึ้นมาให้ 
-// Restaurant.sync({force:false}).then(()=>{
-//     console.log("Table created or already exists");
-// })
-// .catch((error) => {
-//     console.error("error creating table:", error);
-// });
+Restaurant.sync({ force: true }).then(() => {
+    console.log("Table created or already exists");
+})
+    .catch((error) => {
+        console.error("error creating table:", error);
+    });
 
 module.exports = Restaurant;
