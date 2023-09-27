@@ -1,5 +1,6 @@
 const config = require("../config/dbconfig")
 
+
 const Sequelize = require('sequelize');
 const sequelize = new Sequelize(config.db, config.user, config.password, {
     host: config.host,
@@ -26,10 +27,13 @@ db.sequelize = sequelize;
 db.user = require("./user.model")(sequelize, Sequelize);
 db.role = require("./role.model")(sequelize, Sequelize);
 
+db.role.belongsToMany(db.user,{
+    through:"user_roles"
+});
 
 // one to many
 db.user.belongsToMany(db.role, {
-    through: "users_roles"
+    through: "user_roles"
 });
 
 
