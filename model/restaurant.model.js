@@ -1,6 +1,6 @@
-const { DataType, DataTypes } = require("sequelize");
+const { DataTypes } = require("sequelize");
 const sequelize = require("./db");
-//Define the restaurant model
+
 const Restaurant = sequelize.define("re", {
     id: {
         type: DataTypes.INTEGER,
@@ -9,15 +9,15 @@ const Restaurant = sequelize.define("re", {
     },
     name: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     type: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     img: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
     },
     createdAt: {
         type: DataTypes.DATE,

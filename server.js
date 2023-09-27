@@ -18,7 +18,7 @@ function initial() {
         name: 'user',
     });
     role.create({
-        id: 3,
+        id: 2,
         name: "moderator",
     });
     role.create({
