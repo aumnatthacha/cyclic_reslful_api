@@ -1,4 +1,4 @@
-const { Sequelize } = require("sequelize");
+const { Sequelize } = require('sequelize');
 const dbConfig = require("../config/dbconfig");
 // require('dotenv').config()
 //Create sequelize instance\
