@@ -1,9 +1,9 @@
 const express = require("express");
 const cors = require("cors");
-const sql = require("./model/db.js")
+const sql = require("./model/db.js");
 const PORT = 3000;
 const restaurantRouter = require("./Router/restaurant.router");
-const db = require("./model/index.js")
+const db = require("./model/index.js");
 const role = db.role;
 
 // dev mode
