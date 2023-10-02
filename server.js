@@ -28,11 +28,11 @@ function initial() {
 }
 
 
-//
+// server
 const app = express();
 
 
-//
+// use middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -41,7 +41,10 @@ app.get("/", (req, res) => {
     res.send("<h1>This is a  restaurant API</h1>");
 })
 
+// add Router
 app.use("/", restaurantRouter);
+require("./Router/auth.router.js")(app);
+
 
 app.listen(PORT, () => {
     console.log("Server is running on http://localhost:" + PORT);
