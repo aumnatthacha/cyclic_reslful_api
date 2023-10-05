@@ -74,7 +74,6 @@
                 }
             }
         },
-
         "/api/auth/signup": {
             "post": {
                 "tags": [
@@ -100,8 +99,8 @@
                                 },
                                 "roles": {
                                     "type": "array",
-                                    "items":{
-                                        "type" : "string"
+                                    "items": {
+                                        "type": "string"
                                     }
                                 }
                             }
