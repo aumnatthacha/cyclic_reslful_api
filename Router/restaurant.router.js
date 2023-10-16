@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const Restaurant = require("../controllers/restaurant.controller");
-const {authJWt} = require("../middleware/auth.jwt");
+const {authJWt} = require("../middleware");
 
 //Create a new restaurant
 //http://localhost:5000/res
