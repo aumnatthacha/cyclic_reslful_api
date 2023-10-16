@@ -1,8 +1,8 @@
 
-run server = nodemon server.js
-database = dahttp://localhost:3000/res
-swagger = http://localhost:3000/api-docs/
-https://vercel.com/dashboard
+- run server = nodemon server.js
+- database = dahttp://localhost:3000/res
+- swagger = http://localhost:3000/api-docs/
+- https://vercel.com/dashboard
 
 # การเอาเว็บขึ้น server host
 
