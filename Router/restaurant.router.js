@@ -26,7 +26,8 @@ router.get("/res", async (req, res) => {
     }
 });
 
-//get byId
+//get byId 
+//16 test แก้
 router.get("/res/:id",[authJWt.verifyToken], async (req, res) => {
     try {
         const restaurantId = req.params.id;
@@ -43,7 +44,7 @@ router.get("/res/:id",[authJWt.verifyToken], async (req, res) => {
 });
 
 //update
-router.put("/res/:id", async (req, res) => {
+router.put("/res/:id",[authJWt.verifyToken, authJWt.isAdmin], async (req, res) => {
     try {
         const restaurantId = req.params.id;
         const updates = req.body;
@@ -59,7 +60,7 @@ router.put("/res/:id", async (req, res) => {
 });
 
 //delete
-router.delete("/res/:id", async (req, res) => {
+router.delete("/res/:id",[authJWt.verifyToken, authJWt.isAdmin], async (req, res) => {
     try {
         const restaurantId = req.params.id;
         const deletedRestaurant = await Restaurant.Delete(restaurantId);
