@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
-const Restaurant = require("../controllers/restaurant.controller")
+const Restaurant = require("../controllers/restaurant.controller");
+const {authJWt} = require("../middleware/auth.jwt");
 
 //Create a new restaurant
 //http://localhost:5000/res
@@ -26,7 +27,7 @@ router.get("/res", async (req, res) => {
 });
 
 //get byId
-router.get("/res/:id", async (req, res) => {
+router.get("/res/:id",[authJWt.verifyToken], async (req, res) => {
     try {
         const restaurantId = req.params.id;
         const restaurant = await Restaurant.getOne(restaurantId);
