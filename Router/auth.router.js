@@ -13,6 +13,6 @@ module.exports = function (app) {
         [verifySignUp.checkDuplicateUserOrEmail, verifySignUp.checkRolesExisted],
         controller.signup
     );
-    app.post("/api/auth/signin", controller.signin);
-    app.post("/api/auth/refreshToken", controller.refreshToken);
+    app.post("/api/auth/signin", controller.signin); //18
+    app.post("/api/auth/refreshToken", controller.refreshToken); //18
 };
