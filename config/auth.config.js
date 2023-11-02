@@ -6,6 +6,6 @@ module.exports = {
 
     //18
     //for test
-    jwtExpiration: 60,
+    jwtExpiration: 3600,
     jwtRefreshExpiration: 120,
 }
